@@ -11,7 +11,7 @@ const services = [
       "We create safe and confidential spaces where individuals and families can receive professional support, process difficult experiences, and develop practical ways of coping and healing.",
     accent: "blue",
     featured: true,
-    image: "/images/IMG-3.jpg",
+    image: "/Images/IMG-3.jpg",
     tags: [
       "Individual Support",
       "Family Counselling",
@@ -28,7 +28,7 @@ const services = [
       "Our youth-focused work helps young people develop emotional awareness, confidence, resilience, positive relationships, and practical life skills.",
     accent: "purple",
     featured: false,
-    image: "/images/IMG-4.jpg",
+    image: "/Images/IMG-4.jpg",
   },
   {
     number: "03",
@@ -40,7 +40,7 @@ const services = [
       "We partner with schools to create emotionally safe learning environments where children can express themselves, access support, and build healthy coping skills.",
     accent: "green",
     featured: false,
-    image: "/images/IMG-5.jpg",
+    image: "/Images/IMG-5.jpg",
   },
   {
     number: "04",
@@ -52,7 +52,7 @@ const services = [
       "When communities experience floods, fires, displacement, violence, or other emergencies, we provide timely psychological first aid and psychosocial support.",
     accent: "blue",
     featured: false,
-    image: "/images/IMG-6.jpg",
+    image: "/Images/IMG-6.jpg",
   },
   {
     number: "05",
@@ -64,7 +64,7 @@ const services = [
       "We help organizations build healthier workplaces by supporting employee wellbeing, managing stress, increasing mental health awareness, and strengthening organizational resilience.",
     accent: "purple",
     featured: false,
-    image: "/images/IMG-7.jpg",
+    image: "/Images/IMG-7.jpg",
   },
 ];
 
