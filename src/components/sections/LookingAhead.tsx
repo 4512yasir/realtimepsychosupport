@@ -248,7 +248,8 @@ export default function LookingAhead() {
 
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {priorities.map((priority) => {
-            const style = accentStyles[priority.accent];
+            const style =
+               accentStyles[priority.accent as keyof typeof accentStyles];
 
             return (
               <article

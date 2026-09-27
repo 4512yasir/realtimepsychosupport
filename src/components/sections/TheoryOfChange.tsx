@@ -249,7 +249,8 @@ export default function TheoryOfChange() {
 
               <div className="space-y-4">
                 {changeSteps.map((step) => {
-                  const style = accentStyles[step.accent];
+                  const style =
+                   accentStyles[step.accent as keyof typeof accentStyles];
 
                   return (
                     <div

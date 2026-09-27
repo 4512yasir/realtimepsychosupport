@@ -240,7 +240,8 @@ export default function Partnerships() {
 
         <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {partners.map((partner) => {
-            const style = accentStyles[partner.accent];
+            const style =
+               accentStyles[partner.accent as keyof typeof accentStyles];
 
             return (
               <article
