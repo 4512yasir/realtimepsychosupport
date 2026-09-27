@@ -128,7 +128,7 @@ export default function StrategicPillars() {
             <div className="relative min-h-[320px] lg:min-h-[430px]">
 
               <Image
-                src="/images/IMG-9.jpg"
+                src="/Images/IMG-9.jpg"
                 alt="Real Time Psychosupport community mental health work"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"
