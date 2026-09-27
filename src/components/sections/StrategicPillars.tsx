@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const pillars = [
   {
     number: "01",
@@ -60,7 +62,9 @@ export default function StrategicPillars() {
       id="pillars"
       className="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-36"
     >
-      {/* Decorative background */}
+      {/* =========================================================
+          DECORATIVE BACKGROUND
+      ========================================================= */}
 
       <div
         aria-hidden="true"
@@ -74,9 +78,11 @@ export default function StrategicPillars() {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
-        {/* HEADER */}
+        {/* =======================================================
+            HEADER
+        ======================================================= */}
 
-        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
 
           <div>
             <div className="flex items-center gap-3">
@@ -109,19 +115,106 @@ export default function StrategicPillars() {
 
         </div>
 
-        {/* PILLARS */}
+        {/* =======================================================
+            IMAGE + INTRODUCTION
+        ======================================================= */}
 
-        <div className="mt-16 grid gap-5 lg:grid-cols-2">
+        <div className="mt-16 overflow-hidden rounded-[2rem] bg-brand-blue">
+
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
+
+            {/* IMAGE */}
+
+            <div className="relative min-h-[320px] lg:min-h-[430px]">
+
+              <Image
+                src="/images/IMG-9.jpg"
+                alt="Real Time Psychosupport community mental health work"
+                fill
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/70 via-transparent to-transparent" />
+
+              <div className="absolute bottom-6 left-6">
+
+                <span className="rounded-full bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md">
+                  Community-centred care
+                </span>
+
+              </div>
+
+            </div>
+
+            {/* INTRODUCTION */}
+
+            <div className="relative flex items-center p-8 sm:p-10 lg:p-14">
+
+              <div
+                aria-hidden="true"
+                className="absolute -right-20 -top-20 h-60 w-60 rounded-full bg-brand-purple/50"
+              />
+
+              <div className="relative">
+
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">
+                  Beyond individual support
+                </p>
+
+                <h3 className="mt-4 max-w-2xl text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl">
+                  Mental wellbeing is connected to the environments around us.
+                </h3>
+
+                <p className="mt-5 max-w-2xl text-sm leading-7 text-white/70 sm:text-base">
+                  We work across communities, schools, families, humanitarian
+                  settings, and workplaces because meaningful mental health
+                  support extends beyond the individual. Our approach connects
+                  people with the knowledge, relationships, and systems that
+                  help them thrive.
+                </p>
+
+                <div className="mt-7 flex flex-wrap gap-3">
+
+                  <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
+                    Care
+                  </span>
+
+                  <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
+                    Resilience
+                  </span>
+
+                  <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
+                    Community
+                  </span>
+
+                  <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
+                    Hope
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        {/* =======================================================
+            PILLARS
+        ======================================================= */}
+
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
 
           {pillars.map((pillar, index) => {
+
             const style =
               accentStyles[
                 pillar.accent as keyof typeof accentStyles
               ];
 
-            /*
-             * Make the fifth pillar span the full width on large screens.
-             */
             const isLast = index === pillars.length - 1;
 
             return (
@@ -138,7 +231,7 @@ export default function StrategicPillars() {
                   className={`absolute left-0 top-0 h-1 w-full ${style.line}`}
                 />
 
-                <div className="flex flex-col gap-7 sm:flex-row">
+                <div className="relative z-10 flex flex-col gap-7 sm:flex-row">
 
                   {/* Number */}
 
@@ -170,8 +263,6 @@ export default function StrategicPillars() {
                       {pillar.description}
                     </p>
 
-                    {/* Explore indicator */}
-
                     <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-text-muted transition-colors duration-300 group-hover:text-text-primary">
                       <span>Area of focus</span>
 
@@ -199,7 +290,9 @@ export default function StrategicPillars() {
 
         </div>
 
-        {/* CONNECTION STATEMENT */}
+        {/* =======================================================
+            CONNECTION STATEMENT
+        ======================================================= */}
 
         <div className="mt-8 overflow-hidden rounded-[2rem] bg-surface ring-1 ring-border">
 
@@ -218,8 +311,8 @@ export default function StrategicPillars() {
 
               <p className="mt-4 max-w-2xl text-sm leading-7 text-text-secondary sm:text-base">
                 From homes and schools to workplaces and emergency settings,
-                our programmes are designed to meet people where they are and
-                connect them with the support they need.
+                our work is designed to meet people where they are and connect
+                them with the support they need.
               </p>
 
             </div>
@@ -229,8 +322,6 @@ export default function StrategicPillars() {
             <div className="flex items-center justify-center border-t border-border p-8 lg:border-l lg:border-t-0 lg:p-12">
 
               <div className="relative flex h-32 w-32 items-center justify-center">
-
-                {/* Rings */}
 
                 <div
                   aria-hidden="true"
@@ -268,6 +359,7 @@ export default function StrategicPillars() {
             </div>
 
           </div>
+
         </div>
 
       </div>

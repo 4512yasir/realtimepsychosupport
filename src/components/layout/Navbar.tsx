@@ -6,9 +6,14 @@ import Image from "next/image";
 
 const navigation = [
   { name: "About Us", href: "#about" },
-  { name: "Programs", href: "#programs" },
+  { name: "Services", href: "#services" },
+  {name:"Pillars",href:"#pillars"},
   { name: "Our Impact", href: "#impact" },
   { name: "Partnerships", href: "#partnerships" },
+  {name:"Team",href:"#team"},
+  
+  {name:"Gallery",href:"#gallery"},
+  
 ];
 
 export default function Navbar() {

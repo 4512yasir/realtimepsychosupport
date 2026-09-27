@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const principles = [
@@ -5,7 +6,7 @@ const principles = [
     number: "01",
     title: "Rooted in Community",
     description:
-      "We work alongside individuals, families, schools, and community networks to understand local realities and create support that truly responds to people's needs.",
+      "We work alongside individuals, families, schools, and community networks to understand local realities and create support that responds to people's needs.",
     accent: "blue",
   },
   {
@@ -31,7 +32,7 @@ export default function About() {
       className="relative overflow-hidden bg-white py-24 sm:py-28 lg:py-36"
     >
       {/* =========================================================
-          BACKGROUND BRAND ELEMENTS
+          BACKGROUND DECORATIONS
       ========================================================= */}
 
       <div
@@ -47,134 +48,115 @@ export default function About() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
 
         {/* =======================================================
-            SECTION INTRO
+            SECTION HEADER
         ======================================================= */}
 
-        <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+        <div className="max-w-3xl">
 
-          <div>
-            <div className="flex items-center gap-3">
-              <span className="h-1 w-10 rounded-full bg-brand-green" />
+          <div className="flex items-center gap-3">
+            <span className="h-1 w-10 rounded-full bg-brand-green" />
 
-              <span className="text-xs font-bold uppercase tracking-[0.22em] text-brand-green-dark">
-                Who We Are
-              </span>
-            </div>
-
-            <p className="mt-5 text-sm font-medium uppercase tracking-wider text-text-muted">
-              Real Time Psychosupport CBO
-            </p>
+            <span className="text-xs font-bold uppercase tracking-[0.22em] text-brand-green-dark">
+              Who We Are
+            </span>
           </div>
 
-          <div>
-            <h2 className="max-w-4xl text-3xl font-bold leading-[1.12] tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-              Mental healthcare that begins with{" "}
-              <span className="text-brand-blue">
-                people.
-              </span>
-            </h2>
+          <p className="mt-5 text-sm font-medium uppercase tracking-wider text-text-muted">
+            Real Time Psychosupport CBO
+          </p>
 
-            <p className="mt-6 max-w-3xl text-base leading-8 text-text-secondary sm:text-lg">
-              We are a grassroots, community-driven organization based in
-              Mathare, Nairobi, working to make quality mental health and
-              psychosocial support accessible, affordable, and compassionate.
-            </p>
-          </div>
+          <h2 className="mt-4 text-3xl font-bold leading-[1.12] tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
+            Mental healthcare that begins with{" "}
+            <span className="text-brand-blue">
+              people.
+            </span>
+          </h2>
+
+          <p className="mt-6 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg">
+            We are a grassroots, community-driven organization based in
+            Mathare, Nairobi, working to make quality mental health and
+            psychosocial support accessible, affordable, and compassionate.
+          </p>
+
         </div>
 
         {/* =======================================================
-            FEATURE AREA
+            STORY + PHOTO
         ======================================================= */}
 
-        <div className="mt-20 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="mt-16 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch">
 
-          {/* -------------------------------------------------------
-              BELIEF CARD
-          ------------------------------------------------------- */}
+          {/* =====================================================
+              IMAGE
+          ===================================================== */}
 
-          <div className="relative min-h-[430px] overflow-hidden rounded-[2rem] bg-brand-blue p-8 shadow-xl sm:p-10 lg:p-12">
+          <div className="relative min-h-[430px] overflow-hidden rounded-[2rem] bg-brand-blue shadow-xl sm:min-h-[520px]">
 
-            {/* Decorative purple */}
-            <div
-              aria-hidden="true"
-              className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-brand-purple opacity-70 blur-sm"
+            <Image
+              src="/images/IMG-2.jpg"
+              alt="Real Time Psychosupport community mental health work"
+              fill
+              sizes="(max-width: 1024px) 100vw, 45vw"
+              className="object-cover"
             />
 
-            {/* Decorative green */}
-            <div
-              aria-hidden="true"
-              className="absolute -bottom-24 -left-20 h-72 w-72 rounded-full bg-brand-green opacity-40 blur-sm"
-            />
-
-            {/* Decorative ring */}
-            <div
-              aria-hidden="true"
-              className="absolute right-10 top-10 h-28 w-28 rounded-full border border-white/20"
-            />
+            {/* Brand overlay */}
 
             <div
               aria-hidden="true"
-              className="absolute right-16 top-16 h-16 w-16 rounded-full border border-white/20"
+              className="absolute inset-0 bg-gradient-to-t from-brand-blue/80 via-brand-blue/10 to-transparent"
             />
 
-            <div className="relative flex h-full flex-col justify-between">
+            {/* Image label */}
 
-              <div>
+            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
+
+              <div className="max-w-sm rounded-2xl border border-white/30 bg-white/90 p-5 shadow-xl backdrop-blur-md">
+
                 <div className="flex items-center gap-3">
-                  <span className="h-2 w-2 rounded-full bg-brand-green" />
 
-                  <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">
-                    Our Belief
-                  </span>
+                  <span className="h-2.5 w-2.5 rounded-full bg-brand-green" />
+
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-blue">
+                    Community at the heart
+                  </p>
+
                 </div>
 
-                <h3 className="mt-8 max-w-xl text-3xl font-bold leading-tight text-white sm:text-4xl">
-                  Because mental health is not a privilege.
-                </h3>
-
-                <p className="mt-4 max-w-lg text-xl font-medium leading-8 text-white/80">
-                  It is a human right.
+                <p className="mt-2 text-lg font-bold leading-7 text-text-primary">
+                  Supporting people where they live, learn, work, and recover.
                 </p>
-              </div>
 
-              <div className="mt-12">
-                <div className="mb-6 flex h-1.5 max-w-[180px] overflow-hidden rounded-full">
-                  <span className="w-1/3 bg-white" />
-                  <span className="w-1/3 bg-brand-purple" />
-                  <span className="w-1/3 bg-brand-green" />
-                </div>
-
-                <p className="max-w-lg text-sm leading-7 text-white/70">
-                  We work to ensure that people experiencing emotional and
-                  psychological challenges can find support, dignity, and hope
-                  regardless of their economic circumstances.
-                </p>
               </div>
 
             </div>
+
           </div>
 
-          {/* -------------------------------------------------------
-              ORGANIZATION DESCRIPTION
-          ------------------------------------------------------- */}
+          {/* =====================================================
+              OUR STORY
+          ===================================================== */}
 
           <div className="flex flex-col justify-center rounded-[2rem] border border-border bg-surface p-8 sm:p-10 lg:p-12">
 
-            <div className="mb-8 flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue">
+            <div className="flex items-center justify-between">
+
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand-purple">
                 Our Story
               </span>
 
-              <span className="text-3xl font-light text-brand-purple/40">
+              <span className="text-3xl font-light text-brand-purple/30">
                 01
               </span>
+
             </div>
 
-            <h3 className="text-2xl font-bold leading-tight text-text-primary sm:text-3xl">
+            <h3 className="mt-7 text-2xl font-bold leading-tight text-text-primary sm:text-3xl">
               Turning invisible suffering into visible support.
             </h3>
 
             <div className="mt-6 space-y-5 text-sm leading-7 text-text-secondary sm:text-base">
+
               <p>
                 Behind the resilience of communities like Mathare are countless
                 stories of emotional pain — from families facing poverty and
@@ -194,79 +176,189 @@ export default function About() {
                 school-based interventions, workplace wellness, and humanitarian
                 psychosocial support.
               </p>
+
+            </div>
+
+            {/* Mission highlight */}
+
+            <div className="mt-8 rounded-2xl bg-brand-blue-light p-5">
+
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand-blue">
+                Our Purpose
+              </p>
+
+              <p className="mt-2 text-sm font-semibold leading-6 text-text-primary">
+                To restore hope, strengthen resilience, and ensure that every
+                individual has the opportunity to live a mentally healthy and
+                dignified life.
+              </p>
+
             </div>
 
             <Link
               href="#programs"
               className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold text-brand-blue transition-colors hover:text-brand-purple"
             >
-              Discover what we do
-              <span className="text-lg">→</span>
+              Explore our programmes
+
+              <span className="text-lg">
+                →
+              </span>
             </Link>
+
           </div>
+
+        </div>
+
+        {/* =======================================================
+            BELIEF STATEMENT
+        ======================================================= */}
+
+        <div className="relative mt-10 overflow-hidden rounded-[2rem] bg-brand-blue p-8 shadow-xl sm:p-10 lg:p-12">
+
+          {/* Purple decoration */}
+
+          <div
+            aria-hidden="true"
+            className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-brand-purple/70 blur-sm"
+          />
+
+          {/* Green decoration */}
+
+          <div
+            aria-hidden="true"
+            className="absolute -bottom-24 -left-20 h-72 w-72 rounded-full bg-brand-green/40 blur-sm"
+          />
+
+          <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+
+            <div>
+
+              <div className="flex items-center gap-3">
+
+                <span className="h-2 w-2 rounded-full bg-brand-green" />
+
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/70">
+                  What We Believe
+                </span>
+
+              </div>
+
+              <h3 className="mt-6 max-w-3xl text-3xl font-bold leading-tight text-white sm:text-4xl">
+                Because mental health is not a privilege.
+              </h3>
+
+              <p className="mt-3 text-xl font-medium text-white/80">
+                It is a human right.
+              </p>
+
+            </div>
+
+            <div className="lg:max-w-sm">
+
+              <div className="mb-5 flex h-1.5 max-w-[180px] overflow-hidden rounded-full">
+
+                <span className="w-1/3 bg-white" />
+
+                <span className="w-1/3 bg-brand-purple" />
+
+                <span className="w-1/3 bg-brand-green" />
+
+              </div>
+
+              <p className="text-sm leading-7 text-white/70">
+                We work to ensure that people experiencing emotional and
+                psychological challenges can find support, dignity, and hope
+                regardless of their economic circumstances.
+              </p>
+
+            </div>
+
+          </div>
+
         </div>
 
         {/* =======================================================
             THREE PRINCIPLES
         ======================================================= */}
 
-        <div className="mt-20 grid gap-5 md:grid-cols-3">
+        <div className="mt-20">
 
-          {principles.map((principle) => {
+          <div className="mb-8">
 
-            const styles = {
-              blue: {
-                number: "bg-brand-blue-light text-brand-blue",
-                line: "bg-brand-blue",
-              },
-              purple: {
-                number: "bg-brand-purple-light text-brand-purple",
-                line: "bg-brand-purple",
-              },
-              green: {
-                number: "bg-brand-green-light text-brand-green",
-                line: "bg-brand-green",
-              },
-            };
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue">
+              How We Work
+            </p>
 
-            const style =
-              styles[principle.accent as keyof typeof styles];
+            <h3 className="mt-3 text-2xl font-bold text-text-primary sm:text-3xl">
+              Our approach is built on three principles.
+            </h3>
 
-            return (
-              <article
-                key={principle.number}
-                className="group relative overflow-hidden rounded-2xl border border-border bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8"
-              >
+          </div>
 
-                {/* Accent line */}
-                <div
-                  className={`absolute left-0 top-0 h-1 w-full ${style.line}`}
-                />
+          <div className="grid gap-5 md:grid-cols-3">
 
-                <div className="flex items-center justify-between">
+            {principles.map((principle) => {
+
+              const styles = {
+                blue: {
+                  number: "bg-brand-blue-light text-brand-blue",
+                  line: "bg-brand-blue",
+                },
+
+                purple: {
+                  number: "bg-brand-purple-light text-brand-purple",
+                  line: "bg-brand-purple",
+                },
+
+                green: {
+                  number: "bg-brand-green-light text-brand-green",
+                  line: "bg-brand-green",
+                },
+              };
+
+              const style =
+                styles[principle.accent as keyof typeof styles];
+
+              return (
+                <article
+                  key={principle.number}
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8"
+                >
+
+                  {/* Accent line */}
 
                   <div
-                    className={`flex h-11 w-11 items-center justify-center rounded-xl text-xs font-bold ${style.number}`}
-                  >
-                    {principle.number}
+                    className={`absolute left-0 top-0 h-1 w-full ${style.line}`}
+                  />
+
+                  <div className="flex items-center justify-between">
+
+                    <div
+                      className={`flex h-11 w-11 items-center justify-center rounded-xl text-xs font-bold ${style.number}`}
+                    >
+                      {principle.number}
+                    </div>
+
+                    <span className="text-2xl text-text-muted/30 transition-transform duration-300 group-hover:translate-x-1">
+                      →
+                    </span>
+
                   </div>
 
-                  <span className="text-2xl text-text-muted/30 transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </div>
+                  <h3 className="mt-7 text-lg font-bold text-text-primary">
+                    {principle.title}
+                  </h3>
 
-                <h3 className="mt-7 text-lg font-bold text-text-primary">
-                  {principle.title}
-                </h3>
+                  <p className="mt-3 text-sm leading-7 text-text-secondary">
+                    {principle.description}
+                  </p>
 
-                <p className="mt-3 text-sm leading-7 text-text-secondary">
-                  {principle.description}
-                </p>
+                </article>
+              );
+            })}
 
-              </article>
-            );
-          })}
+          </div>
         </div>
 
         {/* =======================================================
@@ -282,15 +374,21 @@ export default function About() {
           </p>
 
           <div className="flex shrink-0 items-center gap-2">
+
             <span className="h-2 w-2 rounded-full bg-brand-blue" />
+
             <span className="h-2 w-2 rounded-full bg-brand-purple" />
+
             <span className="h-2 w-2 rounded-full bg-brand-green" />
+
             <span className="ml-2 text-xs font-semibold uppercase tracking-wider text-text-muted">
               Healing • Hope • Resilience
             </span>
+
           </div>
 
         </div>
+
       </div>
     </section>
   );

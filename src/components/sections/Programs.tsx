@@ -1,4 +1,6 @@
-const programs = [
+import Image from "next/image";
+
+const services = [
   {
     number: "01",
     title: "Community Counselling",
@@ -9,6 +11,12 @@ const programs = [
       "We create safe and confidential spaces where individuals and families can receive professional support, process difficult experiences, and develop practical ways of coping and healing.",
     accent: "blue",
     featured: true,
+    image: "/images/IMG-3.jpg",
+    tags: [
+      "Individual Support",
+      "Family Counselling",
+      "Group Support",
+    ],
   },
   {
     number: "02",
@@ -20,6 +28,7 @@ const programs = [
       "Our youth-focused work helps young people develop emotional awareness, confidence, resilience, positive relationships, and practical life skills.",
     accent: "purple",
     featured: false,
+    image: "/images/IMG-4.jpg",
   },
   {
     number: "03",
@@ -31,6 +40,7 @@ const programs = [
       "We partner with schools to create emotionally safe learning environments where children can express themselves, access support, and build healthy coping skills.",
     accent: "green",
     featured: false,
+    image: "/images/IMG-5.jpg",
   },
   {
     number: "04",
@@ -42,6 +52,7 @@ const programs = [
       "When communities experience floods, fires, displacement, violence, or other emergencies, we provide timely psychological first aid and psychosocial support.",
     accent: "blue",
     featured: false,
+    image: "/images/IMG-6.jpg",
   },
   {
     number: "05",
@@ -53,6 +64,7 @@ const programs = [
       "We help organizations build healthier workplaces by supporting employee wellbeing, managing stress, increasing mental health awareness, and strengthening organizational resilience.",
     accent: "purple",
     featured: false,
+    image: "/images/IMG-7.jpg",
   },
 ];
 
@@ -60,27 +72,24 @@ const accentStyles = {
   blue: {
     number: "bg-brand-blue-light text-brand-blue",
     line: "bg-brand-blue",
-    icon: "bg-brand-blue",
     hover: "group-hover:text-brand-blue",
   },
   purple: {
     number: "bg-brand-purple-light text-brand-purple",
     line: "bg-brand-purple",
-    icon: "bg-brand-purple",
     hover: "group-hover:text-brand-purple",
   },
   green: {
     number: "bg-brand-green-light text-brand-green",
     line: "bg-brand-green",
-    icon: "bg-brand-green",
     hover: "group-hover:text-brand-green",
   },
 };
 
-export default function Programs() {
+export default function Services() {
   return (
     <section
-      id="programs"
+      id="services"
       className="relative overflow-hidden bg-surface py-24 sm:py-28 lg:py-36"
     >
       {/* =========================================================
@@ -115,29 +124,29 @@ export default function Programs() {
             </div>
 
             <p className="mt-5 text-sm font-medium uppercase tracking-wider text-text-muted">
-              Our Programmes
+              Our Services
             </p>
           </div>
 
           <div>
             <h2 className="max-w-4xl text-3xl font-bold leading-[1.12] tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
-              Support designed around{" "}
+              Support that meets people{" "}
               <span className="text-brand-purple">
-                real lives.
+                where they are.
               </span>
             </h2>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-text-secondary sm:text-lg">
-              From everyday emotional support to humanitarian response, our
-              programmes help individuals, families, young people, schools,
-              workplaces, and communities build resilience and wellbeing.
+              We provide compassionate, professional, and community-centred
+              mental health and psychosocial support for individuals, families,
+              young people, schools, workplaces, and communities.
             </p>
           </div>
 
         </div>
 
         {/* =======================================================
-            FEATURED PROGRAM
+            FEATURED SERVICE
         ======================================================= */}
 
         <div className="mt-16">
@@ -156,20 +165,24 @@ export default function Programs() {
               className="absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-brand-green opacity-30"
             />
 
-            <div className="relative grid lg:grid-cols-[1fr_0.8fr]">
+            <div className="relative grid lg:grid-cols-[1fr_0.9fr]">
 
-              {/* Main content */}
+              {/* =================================================
+                  CONTENT
+              ================================================= */}
 
-              <div className="p-8 sm:p-10 lg:p-14">
+              <div className="relative z-10 p-8 sm:p-10 lg:p-14">
 
                 <div className="flex items-center gap-4">
+
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/15 text-xs font-bold text-white">
                     01
                   </span>
 
                   <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">
-                    Featured Programme
+                    Featured Service
                   </span>
+
                 </div>
 
                 <h3 className="mt-8 max-w-2xl text-3xl font-bold leading-tight text-white sm:text-4xl">
@@ -178,7 +191,8 @@ export default function Programs() {
 
                 <p className="mt-5 max-w-2xl text-base leading-8 text-white/75 sm:text-lg">
                   Providing confidential individual, family, and group
-                  counselling services for vulnerable members of the community.
+                  counselling that creates a safe space for people to be heard,
+                  supported, and empowered.
                 </p>
 
                 <p className="mt-5 max-w-2xl text-sm leading-7 text-white/60">
@@ -187,123 +201,194 @@ export default function Programs() {
                   experiences, and develop practical ways of coping and healing.
                 </p>
 
+                {/* Tags */}
+
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
-                    Individual Support
-                  </span>
-
-                  <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
-                    Family Counselling
-                  </span>
-
-                  <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white">
-                    Group Support
-                  </span>
+                  {services[0].tags?.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-white/10 px-4 py-2 text-xs font-semibold text-white"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
+
+                {/* CTA */}
+
+                <a
+                  href="#contact"
+                  className="mt-9 inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-brand-blue transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                >
+                  Talk to us
+                  <span
+                    aria-hidden="true"
+                    className="transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </a>
 
               </div>
 
-              {/* Visual side */}
+              {/* =================================================
+                  FEATURED IMAGE
+              ================================================= */}
 
-              <div className="relative hidden min-h-[390px] overflow-hidden lg:block">
+              <div className="relative min-h-[360px] lg:min-h-[520px]">
 
-                <div className="absolute inset-0 flex items-center justify-center">
+                <Image
+                  src={services[0].image}
+                  alt="Community counselling and psychosocial support"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
 
-                  <div className="relative h-64 w-64">
+                {/* Image overlay */}
 
-                    <div className="absolute inset-0 rounded-full border border-white/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/70 via-brand-blue/10 to-transparent" />
 
-                    <div className="absolute inset-8 rounded-full border border-white/10" />
+                {/* Floating label */}
 
-                    <div className="absolute inset-16 rounded-full bg-white/10" />
+                <div className="absolute bottom-7 left-7 right-7">
 
-                    <div className="absolute left-1/2 top-1/2 flex h-24 w-24 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-2xl">
+                  <div className="inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-white/10 px-5 py-4 backdrop-blur-md">
 
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white text-brand-blue">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
-                        className="h-10 w-10 text-brand-blue"
+                        className="h-5 w-5"
                         aria-hidden="true"
                       >
                         <path
-                          d="M12 21s-7-4.35-9.5-8.5C.5 8.5 2.5 5 6 5c2 0 3.5 1.2 4.5 2.5C11.5 6.2 13 5 15 5c3.5 0 5.5 3.5 3.5 7.5C19 16.65 12 21 12 21Z"
+                          d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78Z"
                           fill="currentColor"
                         />
                       </svg>
+                    </span>
 
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-white/60">
+                        Safe. Confidential. Supportive.
+                      </p>
+
+                      <p className="mt-1 text-sm font-semibold text-white">
+                        A space where people can be heard.
+                      </p>
                     </div>
+
                   </div>
 
                 </div>
 
               </div>
+
             </div>
+
           </article>
+
         </div>
 
         {/* =======================================================
-            OTHER PROGRAMMES
+            OTHER SERVICES
         ======================================================= */}
 
         <div className="mt-6 grid gap-5 md:grid-cols-2">
 
-          {programs
-            .filter((program) => !program.featured)
-            .map((program) => {
+          {services
+            .filter((service) => !service.featured)
+            .map((service) => {
 
               const style =
                 accentStyles[
-                  program.accent as keyof typeof accentStyles
+                  service.accent as keyof typeof accentStyles
                 ];
 
               return (
                 <article
-                  key={program.number}
-                  className="group relative overflow-hidden rounded-[1.5rem] border border-border bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8"
+                  key={service.number}
+                  className="group relative overflow-hidden rounded-[1.5rem] border border-border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
+
                   {/* Top accent */}
 
                   <div
-                    className={`absolute left-0 top-0 h-1 w-full ${style.line}`}
+                    className={`absolute left-0 top-0 z-10 h-1 w-full ${style.line}`}
                   />
 
-                  <div className="flex items-start justify-between gap-5">
+                  {/* =================================================
+                      IMAGE
+                  ================================================= */}
+
+                  <div className="relative h-56 overflow-hidden">
+
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+
+                    {/* Image overlay */}
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
+
+                    {/* Number */}
 
                     <div
-                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-xs font-bold ${style.number}`}
+                      className={`absolute left-6 top-6 flex h-11 w-11 items-center justify-center rounded-xl text-xs font-bold shadow-sm ${style.number}`}
                     >
-                      {program.number}
+                      {service.number}
                     </div>
 
-                    <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">
-                      {program.shortTitle}
+                    {/* Short title */}
+
+                    <span className="absolute bottom-5 left-6 text-xs font-semibold uppercase tracking-wider text-white drop-shadow-md">
+                      {service.shortTitle}
                     </span>
 
                   </div>
 
-                  <h3
-                    className={`mt-7 text-xl font-bold text-text-primary transition-colors ${style.hover}`}
-                  >
-                    {program.title}
-                  </h3>
+                  {/* =================================================
+                      CONTENT
+                  ================================================= */}
 
-                  <p className="mt-3 text-sm leading-7 text-text-secondary">
-                    {program.description}
-                  </p>
+                  <div className="p-7 sm:p-8">
 
-                  <p className="mt-4 border-t border-border pt-4 text-sm leading-7 text-text-muted">
-                    {program.detail}
-                  </p>
+                    <h3
+                      className={`text-xl font-bold text-text-primary transition-colors ${style.hover}`}
+                    >
+                      {service.title}
+                    </h3>
 
-                  <button
-                    type="button"
-                    className={`mt-6 inline-flex items-center gap-2 text-sm font-bold transition-colors ${style.hover}`}
-                  >
-                    Learn more
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
-                      →
-                    </span>
-                  </button>
+                    <p className="mt-3 text-sm leading-7 text-text-secondary">
+                      {service.description}
+                    </p>
+
+                    <p className="mt-4 border-t border-border pt-4 text-sm leading-7 text-text-muted">
+                      {service.detail}
+                    </p>
+
+                    <a
+                      href="#contact"
+                      className={`mt-6 inline-flex items-center gap-2 text-sm font-bold transition-colors ${style.hover}`}
+                    >
+                      Talk to us
+
+                      <span
+                        aria-hidden="true"
+                        className="transition-transform duration-300 group-hover:translate-x-1"
+                      >
+                        →
+                      </span>
+                    </a>
+
+                  </div>
+
                 </article>
               );
             })}
@@ -311,14 +396,14 @@ export default function Programs() {
         </div>
 
         {/* =======================================================
-            PROGRAMME FOOTER
+            APPROACH / CTA
         ======================================================= */}
 
-        <div className="mt-16 rounded-[1.5rem] border border-border bg-white p-7 sm:p-8">
+        <div className="mt-16 overflow-hidden rounded-[1.5rem] border border-border bg-white">
 
-          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div className="grid lg:grid-cols-[1fr_auto] lg:items-center">
 
-            <div className="max-w-2xl">
+            <div className="p-7 sm:p-8 lg:p-10">
 
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue">
                 Our Approach
@@ -328,15 +413,17 @@ export default function Programs() {
                 Professional support. Community connection. Lasting impact.
               </h3>
 
-              <p className="mt-3 text-sm leading-7 text-text-secondary">
-                Our programmes are designed to meet people where they are,
-                while strengthening the families, institutions, and communities
+              <p className="mt-3 max-w-2xl text-sm leading-7 text-text-secondary">
+                Our services are designed to meet people where they are, while
+                strengthening the families, institutions, and communities
                 around them.
               </p>
 
             </div>
 
-            <div className="flex shrink-0 items-center gap-2">
+            {/* Colour identity */}
+
+            <div className="flex items-center gap-2 px-7 pb-7 sm:px-8 sm:pb-8 lg:px-10 lg:py-10">
 
               <span className="h-2.5 w-2.5 rounded-full bg-brand-blue" />
               <span className="h-2.5 w-2.5 rounded-full bg-brand-purple" />
@@ -349,6 +436,31 @@ export default function Programs() {
             </div>
 
           </div>
+
+        </div>
+
+        {/* =======================================================
+            FINAL CTA
+        ======================================================= */}
+
+        <div className="mt-10 text-center">
+
+          <p className="text-sm text-text-secondary">
+            Not sure which service is right for you?
+          </p>
+
+          <a
+            href="#contact"
+            className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-brand-blue transition-colors hover:text-brand-purple"
+          >
+            Talk to our team
+            <span
+              aria-hidden="true"
+              className="transition-transform duration-300 hover:translate-x-1"
+            >
+              →
+            </span>
+          </a>
 
         </div>
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
@@ -37,16 +38,26 @@ export default function Hero() {
 
         <div className="max-w-3xl">
 
-          {/* Eyebrow */}
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-brand-blue/20 bg-brand-blue-light px-4 py-2">
-            <span className="h-2 w-2 rounded-full bg-brand-green" />
+          {/* Organization identity */}
 
-            <span className="text-xs font-bold uppercase tracking-[0.18em] text-brand-blue-dark">
-              Where Expertise Meets Compassion
-            </span>
+          <div className="mb-6">
+            <p className="text-sm font-bold uppercase tracking-[0.22em] text-brand-blue">
+              Real Time Psychosupport CBO
+            </p>
+
+            <div className="mt-3 flex items-center gap-3">
+              <span className="h-px w-10 bg-brand-green" />
+
+              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-text-muted">
+                Where Expertise Meets Compassion
+              </span>
+            </div>
           </div>
 
-          {/* Main Heading */}
+          {/* =====================================================
+              MAIN HEADING
+          ===================================================== */}
+
           <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-text-primary sm:text-5xl lg:text-6xl xl:text-7xl">
             Healing Minds.
 
@@ -59,7 +70,10 @@ export default function Hero() {
             </span>
           </h1>
 
-          {/* Description */}
+          {/* =====================================================
+              DESCRIPTION
+          ===================================================== */}
+
           <p className="mt-7 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg">
             We provide accessible, affordable, and compassionate mental health
             and psychosocial support for individuals, families, and communities
@@ -73,6 +87,7 @@ export default function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
 
             {/* Primary CTA */}
+
             <Link
               href="#contact"
               className="inline-flex h-13 items-center justify-center rounded-full bg-brand-blue px-7 text-sm font-bold text-white shadow-lg shadow-brand-blue/15 transition-all duration-300 hover:-translate-y-1 hover:bg-brand-blue-dark hover:shadow-xl"
@@ -85,6 +100,7 @@ export default function Hero() {
             </Link>
 
             {/* Secondary CTA */}
+
             <Link
               href="#partnerships"
               className="inline-flex h-13 items-center justify-center rounded-full border border-border bg-white px-7 text-sm font-bold text-text-primary transition-all duration-300 hover:-translate-y-1 hover:border-brand-purple/30 hover:bg-brand-purple-light"
@@ -100,7 +116,8 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-text-muted">
 
-            {/* Community Care */}
+            {/* Community */}
+
             <div className="flex items-center gap-2">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-green-light text-brand-green">
                 ✓
@@ -109,7 +126,8 @@ export default function Hero() {
               Community-centered care
             </div>
 
-            {/* Evidence-informed */}
+            {/* Evidence */}
+
             <div className="flex items-center gap-2">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-purple-light text-brand-purple">
                 ✓
@@ -128,127 +146,90 @@ export default function Hero() {
         <div className="relative mx-auto w-full max-w-xl lg:ml-auto">
 
           {/* =====================================================
-              MAIN VISUAL CARD
+              PHOTO CARD
           ===================================================== */}
 
           <div className="relative aspect-[4/4.5] overflow-hidden rounded-[2.5rem] bg-white shadow-2xl shadow-brand-blue/10">
 
-            {/* Brand gradient */}
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 bg-gradient-to-br from-brand-blue via-brand-purple to-brand-green"
+            {/* =================================================
+                PHOTO
+            ================================================= */}
+
+            <Image
+              src="/Images/IMG-1.jpg"
+              alt="Real Time Psychosupport community mental health work"
+              fill
+              priority
+              sizes="(max-width: 1024px) 90vw, 45vw"
+              className="object-cover"
             />
 
-            {/* Soft overlay */}
+            {/* =================================================
+                BRAND OVERLAY
+            ================================================= */}
+
             <div
               aria-hidden="true"
-              className="absolute inset-0 bg-white/85"
+              className="absolute inset-0 bg-gradient-to-br from-brand-blue/35 via-transparent to-brand-purple/35"
             />
 
-            {/* Purple decoration */}
+            {/* =================================================
+                SOFT GREEN GLOW
+            ================================================= */}
+
             <div
               aria-hidden="true"
-              className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand-purple/30 blur-2xl"
+              className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-brand-green/30 blur-3xl"
             />
 
-            {/* Green decoration */}
-            <div
-              aria-hidden="true"
-              className="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-brand-green/30 blur-2xl"
-            />
+            {/* =================================================
+                TOP BRAND LABEL
+            ================================================= */}
 
-            {/* Inner content */}
-            <div className="relative flex h-full flex-col p-7 sm:p-9">
+            <div className="absolute left-6 top-6 rounded-2xl border border-white/40 bg-white/90 px-5 py-3 shadow-lg backdrop-blur-md sm:left-8 sm:top-8">
 
-              {/* =================================================
-                  TOP
-              ================================================= */}
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-blue">
+                Real Time Psychosupport
+              </p>
 
-              <div className="flex items-start justify-between">
+              <p className="mt-1 text-sm font-semibold text-text-primary">
+                Community Mental Health
+              </p>
 
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-blue">
-                    Our Commitment
-                  </p>
+            </div>
 
-                  <p className="mt-2 max-w-xs text-lg font-bold leading-7 text-text-primary">
-                    Mental health is a human right.
-                  </p>
-                </div>
+            {/* =================================================
+                BOTTOM INFORMATION CARD
+            ================================================= */}
 
-                {/* Brand dots */}
-                <div className="flex gap-1.5">
-                  <span className="h-3 w-3 rounded-full bg-brand-blue" />
-                  <span className="h-3 w-3 rounded-full bg-brand-purple" />
-                  <span className="h-3 w-3 rounded-full bg-brand-green" />
-                </div>
+            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
 
-              </div>
+              <div className="rounded-2xl border border-white/50 bg-white/90 p-5 shadow-xl backdrop-blur-md">
 
-              {/* =================================================
-                  CENTRAL VISUAL
-              ================================================= */}
+                <div className="flex items-start justify-between gap-5">
 
-              <div className="relative my-auto flex items-center justify-center py-10">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand-purple">
+                      Our Commitment
+                    </p>
 
-                {/* Blue glow */}
-                <div
-                  aria-hidden="true"
-                  className="absolute h-64 w-64 rounded-full bg-brand-blue/20 blur-3xl"
-                />
-
-                {/* Purple glow */}
-                <div
-                  aria-hidden="true"
-                  className="absolute -right-4 h-48 w-48 rounded-full bg-brand-purple/20 blur-3xl"
-                />
-
-                {/* Green glow */}
-                <div
-                  aria-hidden="true"
-                  className="absolute -left-4 h-48 w-48 rounded-full bg-brand-green/20 blur-3xl"
-                />
-
-                {/* Main circle */}
-                <div className="relative flex h-56 w-56 items-center justify-center rounded-full border border-white/80 bg-white/80 shadow-2xl backdrop-blur-md">
-
-                  {/* Blue ring */}
-                  <div className="absolute inset-5 rounded-full border-[10px] border-brand-blue/20" />
-
-                  {/* Purple ring */}
-                  <div className="absolute inset-9 rounded-full border-[10px] border-brand-purple/30" />
-
-                  {/* Gradient center */}
-                  <div className="relative flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-brand-blue via-brand-purple to-brand-green shadow-xl">
-
-                    <div className="h-10 w-10 rounded-full bg-white/90" />
-
+                    <p className="mt-2 text-lg font-bold leading-6 text-text-primary">
+                      Mental health is a human right.
+                    </p>
                   </div>
 
-                  {/* Blue floating circle */}
-                  <span className="absolute -right-2 top-14 h-9 w-9 rounded-full bg-brand-blue shadow-lg" />
+                  {/* Brand dots */}
 
-                  {/* Purple floating circle */}
-                  <span className="absolute -left-2 bottom-14 h-11 w-11 rounded-full bg-brand-purple shadow-lg" />
-
-                  {/* Green floating circle */}
-                  <span className="absolute bottom-2 left-1/2 h-6 w-6 -translate-x-1/2 rounded-full bg-brand-green shadow-lg" />
+                  <div className="flex gap-1.5 pt-1">
+                    <span className="h-3 w-3 rounded-full bg-brand-blue" />
+                    <span className="h-3 w-3 rounded-full bg-brand-purple" />
+                    <span className="h-3 w-3 rounded-full bg-brand-green" />
+                  </div>
 
                 </div>
-              </div>
 
-              {/* =================================================
-                  BOTTOM MESSAGE
-              ================================================= */}
+                {/* Brand line */}
 
-              <div className="rounded-2xl border border-white/80 bg-white/80 p-5 backdrop-blur-md">
-
-                <p className="text-sm leading-6 text-text-secondary">
-                  Restoring dignity, strengthening resilience, and creating
-                  pathways to healthier communities.
-                </p>
-
-                {/* Three-color brand line */}
                 <div className="mt-4 flex h-1.5 overflow-hidden rounded-full">
                   <span className="w-1/3 bg-brand-blue" />
                   <span className="w-1/3 bg-brand-purple" />
@@ -276,7 +257,36 @@ export default function Hero() {
 
           </div>
 
+          {/* =====================================================
+              FLOATING BRAND ACCENT
+          ===================================================== */}
+
+          <div
+            aria-hidden="true"
+            className="absolute -right-4 top-16 hidden h-16 w-16 rounded-2xl bg-brand-green shadow-xl shadow-brand-green/20 sm:block"
+          />
+
         </div>
+      </div>
+
+      {/* =========================================================
+          BOTTOM BRAND STRIP
+      ========================================================= */}
+
+      <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8 lg:px-10">
+
+        <div className="flex items-center gap-4">
+
+          <span className="h-px flex-1 bg-brand-blue/10" />
+
+          <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-text-muted">
+            Healing • Hope • Community
+          </span>
+
+          <span className="h-px flex-1 bg-brand-purple/10" />
+
+        </div>
+
       </div>
     </section>
   );

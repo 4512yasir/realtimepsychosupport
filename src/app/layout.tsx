@@ -10,21 +10,24 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Real Time Psychosupport CBO",
+    default: "Real Time Psychosupport CBO | Where Expertise Meets Compassion",
     template: "%s | Real Time Psychosupport CBO",
   },
 
   description:
-    "Real Time Psychosupport CBO provides accessible, affordable, and evidence-informed mental health and psychosocial support for individuals, families, and communities in Mathare and beyond.",
+    "Real Time Psychosupport CBO is a community-driven organization in Mathare, Nairobi, providing accessible, affordable, and evidence-informed mental health and psychosocial support to individuals, families, schools, workplaces, and vulnerable communities.",
 
   keywords: [
+    "Real Time Psychosupport CBO",
     "Real Time Psychosupport",
+    "Where Expertise Meets Compassion",
     "mental health Kenya",
-    "psychosocial support Kenya",
     "mental health Mathare",
-    "counselling Nairobi",
+    "psychosocial support Kenya",
     "community mental health",
+    "counselling Nairobi",
     "youth mental health",
+    "school mental health",
     "trauma support",
     "psychological first aid",
   ],
@@ -41,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_KE",
     siteName: "Real Time Psychosupport CBO",
-    title: "Real Time Psychosupport CBO",
+    title: "Real Time Psychosupport CBO | Where Expertise Meets Compassion",
     description:
       "Healing Minds. Restoring Hope. Empowering Communities.",
   },

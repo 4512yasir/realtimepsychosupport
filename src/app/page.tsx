@@ -7,12 +7,15 @@ import TheoryOfChange from "@/components/sections/TheoryOfChange";
 import StrategicPillars from "@/components/sections/StrategicPillars";
 import Partnerships from "@/components/sections/Partnerships";
 import SuccessStories from "@/components/sections/SuccessStories";
-import Leadership from "@/components/sections/Leadership";
-import Governance from "@/components/sections/Governance";
-import LookingAhead from "@/components/sections/LookingAhead";
-import WhyPartner from "@/components/sections/WhyPartner";
+// import Leadership from "@/components/sections/Leadership";
+// import Governance from "@/components/sections/Governance";
+// import LookingAhead from "@/components/sections/LookingAhead";
+// import WhyPartner from "@/components/sections/WhyPartner";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+import Gallery from "@/components/sections/gallery"
+import Team from "@/components/sections/Team";
+import Services from "@/components/sections/Programs";
 
 export default function Home() {
   return (
@@ -22,16 +25,14 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Programs />
+        <Services />
+        <StrategicPillars />
         <Impact />
         <TheoryOfChange />
-        <StrategicPillars />
         <Partnerships />
         <SuccessStories />
-        <Leadership />
-        <Governance />
-        <LookingAhead />
-        <WhyPartner />
+        <Team />
+        <Gallery />
         <Contact />
       </main>
       <Footer />
