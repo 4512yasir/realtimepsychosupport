@@ -174,7 +174,7 @@ export default function Contact() {
               <div className="relative mb-10 overflow-hidden rounded-[1.5rem] border border-white/10">
                 <div className="relative h-56 sm:h-64">
                   <img
-                    src="/images/IMG-7.jpg"
+                    src="/Images/IMG-7.jpg"
                     alt="Real Time Psychosupport engaging with the community"
                     className="absolute inset-0 h-full w-full object-cover"
                   />

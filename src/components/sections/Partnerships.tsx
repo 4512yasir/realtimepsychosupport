@@ -8,7 +8,7 @@ const partners = [
       "Youth mentorship programmes and psychosocial support for young mothers, promoting resilience, confidence, and personal development.",
     category: "Youth & Community",
     accent: "blue",
-    image: "/images/nccklogo.png",
+    image: "/Images/nccklogo.png",
   },
   {
     name: "Media Council of Kenya",
@@ -17,7 +17,7 @@ const partners = [
       "Employee counselling, workplace mental health programmes, psychoeducation, and trauma support for media professionals.",
     category: "Workplace Wellness",
     accent: "purple",
-    image: "/images/media.jfif",
+    image: "/Images/media.jfif",
   },
   {
     name: "Plan International Kenya",
@@ -26,7 +26,7 @@ const partners = [
       "Adolescent mental health, psychosocial support, counselling services, and humanitarian emergency response initiatives.",
     category: "Youth & Humanitarian",
     accent: "green",
-    image: "/images/plan.png",
+    image: "/Images/plan.png",
   },
   {
     name: "Kenya Red Cross Society",
@@ -35,7 +35,7 @@ const partners = [
       "Psychological First Aid and psychosocial support for communities affected by floods and other emergencies.",
     category: "Emergency Response",
     accent: "blue",
-    image: "/images/redcross.png",
+    image: "/Images/redcross.png",
   },
   {
     name: "World Vision Kenya",
@@ -44,7 +44,7 @@ const partners = [
       "Trauma counselling and psychosocial recovery programmes for survivors of devastating community fires.",
     category: "Humanitarian Support",
     accent: "purple",
-    image: "/images/worldvision.jfif",
+    image: "/Images/worldvision.jfif",
   },
   {
     name: "Global Art Interventions",
@@ -53,7 +53,7 @@ const partners = [
       "School-based art therapy programmes that use creativity to promote healing, emotional expression, and resilience.",
     category: "School Mental Health",
     accent: "green",
-    image: "/images/GLOBALART.jpg",
+    image: "/Images/GLOBALART.jpg",
   },
 ];
 

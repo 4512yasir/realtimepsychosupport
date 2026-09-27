@@ -4,37 +4,37 @@ const gallery = [
   {
     title: "Community Mental Health",
     category: "Community",
-    image: "/images/IMG-12.jpg",
+    image: "/Images/IMG-12.jpg",
     accent: "blue",
   },
   {
     title: "Supporting Young People",
     category: "Youth",
-    image: "/images/IMG-13.jpg",
+    image: "/Images/IMG-13.jpg",
     accent: "purple",
   },
   {
     title: "Mental Health Awareness",
     category: "Awareness",
-    image: "/images/IMG-10.jpg",
+    image: "/Images/IMG-10.jpg",
     accent: "green",
   },
   {
     title: "Community Engagement",
     category: "Outreach",
-    image: "/images/IMG-4.jpg",
+    image: "/Images/IMG-4.jpg",
     accent: "blue",
   },
   {
     title: "Counselling & Support",
     category: "Psychosocial Support",
-    image: "/images/IMG-5.jpg",
+    image: "/Images/IMG-5.jpg",
     accent: "purple",
   },
   {
     title: "Building Resilience",
     category: "Wellbeing",
-    image: "/images/IMG-10.jpg",
+    image: "/Images/IMG-10.jpg",
     accent: "green",
   },
 ];

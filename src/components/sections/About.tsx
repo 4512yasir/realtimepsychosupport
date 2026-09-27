@@ -93,7 +93,7 @@ export default function About() {
           <div className="relative min-h-[430px] overflow-hidden rounded-[2rem] bg-brand-blue shadow-xl sm:min-h-[520px]">
 
             <Image
-              src="/images/IMG-2.jpg"
+              src="/Images/IMG-5.jpg"
               alt="Real Time Psychosupport community mental health work"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
@@ -196,7 +196,7 @@ export default function About() {
             </div>
 
             <Link
-              href="#programs"
+              href="#services"
               className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-bold text-brand-blue transition-colors hover:text-brand-purple"
             >
               Explore our programmes
