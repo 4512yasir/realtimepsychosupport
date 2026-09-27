@@ -17,7 +17,7 @@ const partners = [
       "Employee counselling, workplace mental health programmes, psychoeducation, and trauma support for media professionals.",
     category: "Workplace Wellness",
     accent: "purple",
-    image: "/Images/media.jfif",
+    image: "/Images/media.jpg",
   },
   {
     name: "Plan International Kenya",
@@ -44,7 +44,7 @@ const partners = [
       "Trauma counselling and psychosocial recovery programmes for survivors of devastating community fires.",
     category: "Humanitarian Support",
     accent: "purple",
-    image: "/Images/worldvision.jfif",
+    image: "/Images/worldvision.jpg",
   },
   {
     name: "Global Art Interventions",
