@@ -177,7 +177,7 @@ export default function Footer() {
             <div className="relative overflow-hidden rounded-[2rem] border border-white/10">
               <div className="relative h-72 sm:h-80">
                 <Image
-                  src="/images/footer/community.jpg"
+                  src="/Images/IMG-6.jpg"
                   alt="Real Time Psychosupport community engagement"
                   fill
                   className="object-cover"
