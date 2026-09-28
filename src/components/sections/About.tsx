@@ -214,7 +214,7 @@ export default function About() {
 
           <div className="relative min-h-[430px] overflow-hidden rounded-[2rem] bg-brand-blue shadow-xl sm:min-h-[520px]">
             <Image
-              src="/images/IMG-5.jpg"
+              src="/Images/IMG-5.jpg"
               alt="Real Time Psychosupport community mental health work"
               fill
               sizes="(max-width: 1024px) 100vw, 45vw"
