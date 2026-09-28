@@ -1,39 +1,59 @@
 const impactStats = [
   {
-    value: "—",
-    label: "Individuals supported",
-    description: "People reached through counselling and psychosocial support.",
+    value: "1,000+",
+    label: "Community members reached",
+    description:
+      "People reached through counselling, psychosocial support, awareness, outreach, and community-based programmes.",
     accent: "blue",
   },
   {
-    value: "—",
-    label: "Children & youth reached",
-    description: "Young people engaged through mental health and resilience programmes.",
+    value: "125",
+    label: "Social workers trained",
+    description:
+      "Social workers equipped with Psychological First Aid skills to strengthen community-based support.",
     accent: "purple",
   },
   {
-    value: "—",
-    label: "Schools supported",
-    description: "Schools reached through mental health and wellbeing initiatives.",
+    value: "8",
+    label: "Schools served",
+    description:
+      "Schools reached through community theatre and mental health and wellbeing programmes.",
     accent: "green",
   },
   {
-    value: "—",
-    label: "Community forums",
-    description: "Mental health awareness and community engagement sessions conducted.",
+    value: "5",
+    label: "Counties reached",
+    description:
+      "Mental health and psychosocial support initiatives implemented across five counties.",
     accent: "blue",
   },
   {
-    value: "—",
-    label: "Emergency interventions",
-    description: "Psychosocial interventions delivered during humanitarian emergencies.",
+    value: "123",
+    label: "Workplace staff supported",
+    description:
+      "Staff supported through workplace mental health, counselling, psychoeducation, and wellbeing initiatives.",
     accent: "purple",
   },
   {
-    value: "—",
-    label: "Professionals trained",
-    description: "People equipped with mental health and psychosocial support skills.",
+    value: "25–30",
+    label: "Young mothers supported",
+    description:
+      "Young mothers engaged through active Her Rise cohorts focused on resilience, wellbeing, and personal development.",
     accent: "green",
+  },
+  {
+    value: "30",
+    label: "Peer responders supported",
+    description:
+      "Peer responders supported during a flood emergency response initiative.",
+    accent: "blue",
+  },
+  {
+    value: "6+",
+    label: "Partner organisations",
+    description:
+      "Organisations working with Real Time Psychosupport across public, community, and NGO sectors.",
+    accent: "purple",
   },
 ];
 
@@ -49,7 +69,7 @@ const accentStyles = {
     background: "bg-brand-purple-light",
   },
   green: {
-    number: "text-brand-green",
+    number: "text-brand-green-dark",
     line: "bg-brand-green",
     background: "bg-brand-green-light",
   },
@@ -76,13 +96,11 @@ export default function Impact() {
       />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-
         {/* =======================================================
             HEADER
         ======================================================= */}
 
         <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
-
           <div>
             <div className="flex items-center gap-3">
               <span className="h-1 w-10 rounded-full bg-brand-green" />
@@ -100,18 +118,16 @@ export default function Impact() {
           <div>
             <h2 className="max-w-4xl text-3xl font-bold leading-[1.12] tracking-tight text-text-primary sm:text-4xl lg:text-5xl">
               Every person supported is a{" "}
-              <span className="text-brand-blue">
-                story changed.
-              </span>
+              <span className="text-brand-blue">story changed.</span>
             </h2>
 
             <p className="mt-6 max-w-3xl text-base leading-8 text-text-secondary sm:text-lg">
-              Every counselling session, youth dialogue, school intervention,
-              and community outreach activity contributes to healthier people,
-              stronger families, and more resilient communities.
+              Our work brings mental health and psychosocial support closer to
+              individuals, families, schools, workplaces, and communities.
+              Through counselling, training, outreach, and partnerships, we
+              continue to expand access to care and build resilience.
             </p>
           </div>
-
         </div>
 
         {/* =======================================================
@@ -119,13 +135,10 @@ export default function Impact() {
         ======================================================= */}
 
         <div className="mt-16 overflow-hidden rounded-[2rem] bg-brand-blue shadow-xl">
-
           <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
-
             {/* Left */}
 
             <div className="relative p-8 sm:p-10 lg:p-14">
-
               <div
                 aria-hidden="true"
                 className="absolute -left-20 -top-20 h-64 w-64 rounded-full bg-brand-purple opacity-60"
@@ -137,7 +150,6 @@ export default function Impact() {
               />
 
               <div className="relative">
-
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-white/60">
                   Impact at a Glance
                 </span>
@@ -147,29 +159,23 @@ export default function Impact() {
                 </h3>
 
                 <p className="mt-6 max-w-2xl text-base leading-8 text-white/70">
-                  Our work brings mental health and psychosocial support closer
-                  to the people who need it most. We combine professional
-                  expertise with community knowledge to create meaningful and
-                  sustainable change.
+                  Real Time Psychosupport combines professional expertise,
+                  community knowledge, and practical mental health
+                  interventions to support people and strengthen the systems
+                  around them.
                 </p>
 
                 <div className="mt-9 flex items-center gap-3">
-
                   <span className="h-1.5 w-12 rounded-full bg-white" />
                   <span className="h-1.5 w-8 rounded-full bg-brand-purple" />
                   <span className="h-1.5 w-5 rounded-full bg-brand-green" />
-
                 </div>
-
               </div>
             </div>
 
             {/* Right */}
 
             <div className="relative flex min-h-[320px] items-center justify-center overflow-hidden border-t border-white/10 lg:border-l lg:border-t-0">
-
-              {/* Concentric circles */}
-
               <div
                 aria-hidden="true"
                 className="absolute h-72 w-72 rounded-full border border-white/10"
@@ -186,9 +192,7 @@ export default function Impact() {
               />
 
               <div className="relative text-center">
-
                 <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white shadow-2xl">
-
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -200,17 +204,13 @@ export default function Impact() {
                       fill="currentColor"
                     />
                   </svg>
-
                 </div>
 
                 <p className="mt-5 text-xs font-bold uppercase tracking-[0.2em] text-white/50">
                   Healing • Hope • Resilience
                 </p>
-
               </div>
-
             </div>
-
           </div>
         </div>
 
@@ -218,21 +218,16 @@ export default function Impact() {
             STATISTICS
         ======================================================= */}
 
-        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {impactStats.map((stat) => {
-
             const style =
-              accentStyles[
-                stat.accent as keyof typeof accentStyles
-              ];
+              accentStyles[stat.accent as keyof typeof accentStyles];
 
             return (
               <article
                 key={stat.label}
                 className="group relative overflow-hidden rounded-[1.5rem] border border-border bg-surface p-7 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl sm:p-8"
               >
-
                 {/* Accent line */}
 
                 <div
@@ -240,7 +235,6 @@ export default function Impact() {
                 />
 
                 <div className="flex items-start justify-between">
-
                   <div
                     className={`flex h-10 w-10 items-center justify-center rounded-xl text-xs font-bold ${style.background} ${style.number}`}
                   >
@@ -250,11 +244,9 @@ export default function Impact() {
                   <span className="text-xs font-semibold uppercase tracking-wider text-text-muted">
                     Impact
                   </span>
-
                 </div>
 
                 <div className="mt-8">
-
                   <div
                     className={`text-4xl font-bold tracking-tight ${style.number}`}
                   >
@@ -268,13 +260,10 @@ export default function Impact() {
                   <p className="mt-2 text-sm leading-6 text-text-secondary">
                     {stat.description}
                   </p>
-
                 </div>
-
               </article>
             );
           })}
-
         </div>
 
         {/* =======================================================
@@ -282,26 +271,20 @@ export default function Impact() {
         ======================================================= */}
 
         <div className="mt-14 border-t border-border pt-8">
-
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-
-            <p className="max-w-2xl text-sm leading-7 text-text-muted">
-              Our impact figures are continuously monitored and updated as we
-              expand our programmes and reach more communities.
+            <p className="max-w-3xl text-sm leading-7 text-text-muted">
+              These figures reflect the reach and activities reported across
+              Real Time Psychosupport programmes and partnerships. Impact
+              figures are monitored and updated as programmes grow.
             </p>
 
-            <div className="flex items-center gap-2">
-
+            <div className="flex shrink-0 items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-brand-blue" />
               <span className="h-2 w-2 rounded-full bg-brand-purple" />
               <span className="h-2 w-2 rounded-full bg-brand-green" />
-
             </div>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

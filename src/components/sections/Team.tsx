@@ -20,7 +20,7 @@ const team = [
       "Provides professional counselling and psychosocial support, helping individuals and families access compassionate and client-centred mental health care.",
   },
   {
-    name: "Monica Njeri",
+    name: "Monicah Njeri",
     role: "Community Outreach Lead",
     image: "/images/team/monica-njeri.jpg",
     initials: "MN",
@@ -29,7 +29,7 @@ const team = [
       "Leads community outreach initiatives and strengthens engagement with individuals, families, schools, and community networks.",
   },
   {
-    name: "Matthews Muiruri",
+    name: "Mathews Muiruri",
     role: "Project Officer",
     image: "/images/team/matthews-muiruri.jpg",
     initials: "MM",

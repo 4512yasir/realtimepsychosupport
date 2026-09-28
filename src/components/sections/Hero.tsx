@@ -8,19 +8,16 @@ export default function Hero() {
           BACKGROUND DECORATIONS
       ========================================================= */}
 
-      {/* Oceanic Blue */}
       <div
         aria-hidden="true"
         className="absolute -left-32 top-20 -z-10 h-72 w-72 rounded-full bg-brand-blue-light blur-3xl"
       />
 
-      {/* Purple */}
       <div
         aria-hidden="true"
         className="absolute -right-32 bottom-0 -z-10 h-96 w-96 rounded-full bg-brand-purple-light blur-3xl"
       />
 
-      {/* Green */}
       <div
         aria-hidden="true"
         className="absolute right-1/3 top-1/4 -z-10 h-40 w-40 rounded-full bg-brand-green-light blur-3xl"
@@ -30,7 +27,7 @@ export default function Hero() {
           HERO CONTAINER
       ========================================================= */}
 
-      <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-14 px-5 py-20 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-24">
+      <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-20">
 
         {/* =======================================================
             LEFT CONTENT
@@ -86,8 +83,6 @@ export default function Hero() {
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
 
-            {/* Primary CTA */}
-
             <Link
               href="#contact"
               className="inline-flex h-13 items-center justify-center rounded-full bg-brand-blue px-7 text-sm font-bold text-white shadow-lg shadow-brand-blue/15 transition-all duration-300 hover:-translate-y-1 hover:bg-brand-blue-dark hover:shadow-xl"
@@ -98,8 +93,6 @@ export default function Hero() {
                 →
               </span>
             </Link>
-
-            {/* Secondary CTA */}
 
             <Link
               href="#partnerships"
@@ -114,9 +107,7 @@ export default function Hero() {
               TRUST INDICATORS
           ===================================================== */}
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-text-muted">
-
-            {/* Community */}
+          <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-text-muted">
 
             <div className="flex items-center gap-2">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-green-light text-brand-green">
@@ -126,8 +117,6 @@ export default function Hero() {
               Community-centered care
             </div>
 
-            {/* Evidence */}
-
             <div className="flex items-center gap-2">
               <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-purple-light text-brand-purple">
                 ✓
@@ -135,6 +124,68 @@ export default function Hero() {
 
               Evidence-informed support
             </div>
+
+          </div>
+
+          {/* =====================================================
+              IMPACT SNAPSHOT
+          ===================================================== */}
+
+          <div className="mt-10 border-t border-border pt-7">
+
+            <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.22em] text-text-muted">
+              Our Impact
+            </p>
+
+            <div className="grid grid-cols-3 gap-4 sm:gap-7">
+
+              {/* People reached */}
+
+              <div>
+                <p className="text-2xl font-bold tracking-tight text-brand-blue sm:text-3xl">
+                  1,000+
+                </p>
+
+                <p className="mt-1 text-xs font-medium leading-5 text-text-secondary sm:text-sm">
+                  Community Members Reached
+                </p>
+              </div>
+
+              {/* Active programmes */}
+
+              <div className="border-l border-border pl-4 sm:pl-7">
+                <p className="text-2xl font-bold tracking-tight text-brand-purple sm:text-3xl">
+                  6+
+                </p>
+
+                <p className="mt-1 text-xs font-medium leading-5 text-text-secondary sm:text-sm">
+                  Active Programmes
+                </p>
+              </div>
+
+              {/* Counties */}
+
+              <div className="border-l border-border pl-4 sm:pl-7">
+                <p className="text-2xl font-bold tracking-tight text-brand-green-dark sm:text-3xl">
+                  5
+                </p>
+
+                <p className="mt-1 text-xs font-medium leading-5 text-text-secondary sm:text-sm">
+                  Counties Reached
+                </p>
+              </div>
+
+            </div>
+
+            <Link
+              href="#impact"
+              className="mt-5 inline-flex items-center text-xs font-bold text-brand-blue transition-colors hover:text-brand-purple"
+            >
+              Explore our impact
+              <span className="ml-2">
+                →
+              </span>
+            </Link>
 
           </div>
         </div>
@@ -151,10 +202,6 @@ export default function Hero() {
 
           <div className="relative aspect-[4/4.5] overflow-hidden rounded-[2.5rem] bg-white shadow-2xl shadow-brand-blue/10">
 
-            {/* =================================================
-                PHOTO
-            ================================================= */}
-
             <Image
               src="/Images/IMG-1.jpg"
               alt="Real Time Psychosupport community mental health work"
@@ -164,18 +211,14 @@ export default function Hero() {
               className="object-cover"
             />
 
-            {/* =================================================
-                BRAND OVERLAY
-            ================================================= */}
+            {/* Brand overlay */}
 
             <div
               aria-hidden="true"
               className="absolute inset-0 bg-gradient-to-br from-brand-blue/35 via-transparent to-brand-purple/35"
             />
 
-            {/* =================================================
-                SOFT GREEN GLOW
-            ================================================= */}
+            {/* Soft green glow */}
 
             <div
               aria-hidden="true"
@@ -218,8 +261,6 @@ export default function Hero() {
                     </p>
                   </div>
 
-                  {/* Brand dots */}
-
                   <div className="flex gap-1.5 pt-1">
                     <span className="h-3 w-3 rounded-full bg-brand-blue" />
                     <span className="h-3 w-3 rounded-full bg-brand-purple" />
@@ -227,8 +268,6 @@ export default function Hero() {
                   </div>
 
                 </div>
-
-                {/* Brand line */}
 
                 <div className="mt-4 flex h-1.5 overflow-hidden rounded-full">
                   <span className="w-1/3 bg-brand-blue" />
