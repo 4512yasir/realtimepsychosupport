@@ -55,7 +55,7 @@ const services = [
       "Our school-based work includes community theatre, storytelling, and creative expression that help children and adolescents explore emotions and reinforce values such as peace, kindness, hope, and resilience.",
     accent: "green",
     featured: false,
-    image: "/Images/IMG-6.jpg",
+    image: "/Images/children.jpg",
   },
   {
     number: "05",

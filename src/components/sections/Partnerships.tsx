@@ -183,7 +183,7 @@ export default function Partnerships() {
 
             <div className="relative min-h-[320px] lg:min-h-[420px]">
               <Image
-                src="/Images/IMG-7"
+                src="/Images/IMG-9.jpg"
                 alt="Real Time Psychosupport working with community and partner organizations"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"

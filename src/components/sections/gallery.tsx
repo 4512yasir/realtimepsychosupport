@@ -8,6 +8,13 @@ const gallery = [
     accent: "blue",
   },
   {
+    title: "School Mental Health Programs",
+    category: "Education",
+    image: "/Images/children.jpg",
+    accent: "blue",
+  },
+
+  {
     title: "Supporting Young People",
     category: "Youth",
     image: "/Images/IMG-13.jpg",
@@ -22,7 +29,7 @@ const gallery = [
   {
     title: "Community Engagement",
     category: "Outreach",
-    image: "/Images/IMG-4.jpg",
+    image: "/Images/outreach.jpg",
     accent: "blue",
   },
   {
