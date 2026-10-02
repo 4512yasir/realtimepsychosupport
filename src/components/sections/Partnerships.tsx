@@ -26,7 +26,7 @@ const partners = [
       "Adolescent mental health, psychosocial support, counselling services, and humanitarian emergency response initiatives.",
     category: "Youth & Humanitarian",
     accent: "green",
-    image: "/Images/plan.png",
+    image: "/Images/plan.jpg",
   },
   {
     name: "Kenya Red Cross Society",

@@ -28,7 +28,7 @@ const contactDetails = [
   },
   {
     label: "Call Us",
-    value: "Telephone: Coming Soon",
+    value: "Telephone: +254713964300",
     description:
       "Reach out to our team for enquiries, support, programmes, and collaboration.",
     icon: (
