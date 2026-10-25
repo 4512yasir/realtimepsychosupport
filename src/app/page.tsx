@@ -16,6 +16,7 @@ import Footer from "@/components/sections/Footer";
 import Gallery from "@/components/sections/gallery"
 import Team from "@/components/sections/Team";
 import Services from "@/components/sections/Programs";
+import Support from "@/components/sections/support";
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
         <SuccessStories />
         <Team />
         <Gallery />
+        <Support />
         <Contact />
       </main>
       <Footer />

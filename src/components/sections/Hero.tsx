@@ -1,331 +1,257 @@
+
 import Image from "next/image";
 import Link from "next/link";
 
+const impactStats = [
+  {
+    value: "1,000+",
+    label: "Community members reached",
+    accent: "text-brand-blue",
+  },
+  {
+    value: "6+",
+    label: "Active programmes",
+    accent: "text-brand-purple",
+  },
+  {
+    value: "5",
+    label: "Counties reached",
+    accent: "text-brand-green-dark",
+  },
+];
+
+const commitments = [
+  "Community-centred care",
+  "Evidence-informed support",
+];
+
 export default function Hero() {
   return (
-    <section className="relative isolate overflow-hidden bg-white">
-      {/* =========================================================
-          BACKGROUND DECORATIONS
-      ========================================================= */}
-
+    <section className="relative isolate overflow-hidden bg-[#FCFCFE]">
+      {/* Background atmosphere */}
       <div
         aria-hidden="true"
-        className="absolute -left-32 top-20 -z-10 h-72 w-72 rounded-full bg-brand-blue-light blur-3xl"
+        className="pointer-events-none absolute -left-48 top-0 -z-10 h-[500px] w-[500px] rounded-full bg-brand-blue-light/70 blur-[100px]"
       />
-
       <div
         aria-hidden="true"
-        className="absolute -right-32 bottom-0 -z-10 h-96 w-96 rounded-full bg-brand-purple-light blur-3xl"
+        className="pointer-events-none absolute -right-48 top-40 -z-10 h-[500px] w-[500px] rounded-full bg-brand-purple-light/60 blur-[110px]"
       />
-
       <div
         aria-hidden="true"
-        className="absolute right-1/3 top-1/4 -z-10 h-40 w-40 rounded-full bg-brand-green-light blur-3xl"
+        className="pointer-events-none absolute bottom-0 left-1/3 -z-10 h-72 w-72 rounded-full bg-brand-green-light/40 blur-[100px]"
       />
 
-      {/* =========================================================
-          HERO CONTAINER
-      ========================================================= */}
+      <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-20 lg:min-h-[780px] lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:px-10 lg:py-20">
+        {/* Left: Main message */}
+        <div className="relative z-10">
+          {/* Organisation identity */}
+          <div className="flex items-center gap-4">
+            <div className="h-11 w-1 rounded-full bg-brand-green" />
 
-      <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-7xl items-center gap-14 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-20">
-
-        {/* =======================================================
-            LEFT CONTENT
-        ======================================================= */}
-
-        <div className="max-w-3xl">
-
-          {/* Organization identity */}
-
-          <div className="mb-6">
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-brand-blue">
-              Real Time Psychosupport CBO
-            </p>
-
-            <div className="mt-3 flex items-center gap-3">
-              <span className="h-px w-10 bg-brand-green" />
-
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-text-muted">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-blue sm:text-sm">
+                Real Time Psychosupport CBO
+              </p>
+              <p className="mt-1.5 text-xs font-medium tracking-wide text-text-muted sm:text-sm">
                 Where Expertise Meets Compassion
-              </span>
+              </p>
             </div>
           </div>
 
-          {/* =====================================================
-              MAIN HEADING
-          ===================================================== */}
-
-          <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-text-primary sm:text-5xl lg:text-6xl xl:text-7xl">
+          {/* Headline */}
+          <h1 className="mt-9 max-w-3xl text-[2.8rem] font-semibold leading-[1.06] tracking-[-0.045em] text-text-primary sm:text-6xl lg:mt-11 lg:text-[4.5rem] xl:text-[5rem]">
             Healing Minds.
-
-            <span className="block text-brand-blue">
+            <span className="mt-2 block text-brand-blue">
               Restoring Hope.
             </span>
-
-            <span className="block text-brand-purple">
+            <span className="mt-2 block text-brand-purple">
               Empowering Communities.
             </span>
           </h1>
 
-          {/* =====================================================
-              DESCRIPTION
-          ===================================================== */}
-
-          <p className="mt-7 max-w-2xl text-base leading-8 text-text-secondary sm:text-lg">
-            We provide accessible, affordable, and compassionate mental health
-            and psychosocial support for individuals, families, and communities
-            — helping people heal, build resilience, and thrive.
+          {/* Description */}
+          <p className="mt-7 max-w-xl text-base leading-8 text-text-secondary sm:mt-8 sm:text-lg sm:leading-9">
+            We provide accessible, affordable, and compassionate mental
+            health and psychosocial support for individuals, families,
+            and communities — helping people heal, build resilience,
+            and thrive.
           </p>
 
-          {/* =====================================================
-              CTA BUTTONS
-          ===================================================== */}
-
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-
+          {/* Primary actions */}
+          <div className="mt-8 flex flex-col gap-3 sm:mt-9 sm:flex-row sm:flex-wrap">
             <Link
-              href="#contact"
-              className="inline-flex h-13 items-center justify-center rounded-full bg-brand-blue px-7 text-sm font-bold text-white shadow-lg shadow-brand-blue/15 transition-all duration-300 hover:-translate-y-1 hover:bg-brand-blue-dark hover:shadow-xl"
+              href="/#contact"
+              className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-brand-blue px-7 py-4 text-sm font-bold text-white shadow-lg shadow-brand-blue/15 transition duration-300 hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:ring-offset-2"
             >
               Get Support
-
-              <span className="ml-2 text-base">
+              <span
+                aria-hidden="true"
+                className="text-lg transition-transform duration-300 group-hover:translate-x-1"
+              >
                 →
               </span>
             </Link>
 
             <Link
-              href="#partnerships"
-              className="inline-flex h-13 items-center justify-center rounded-full border border-border bg-white px-7 text-sm font-bold text-text-primary transition-all duration-300 hover:-translate-y-1 hover:border-brand-purple/30 hover:bg-brand-purple-light"
+              href="/#partnerships"
+              className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-border bg-white/80 px-7 py-4 text-sm font-bold text-text-primary transition duration-300 hover:-translate-y-0.5 hover:border-brand-purple/40 hover:bg-brand-purple-light/60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-purple focus-visible:ring-offset-2"
             >
               Partner With Us
-            </Link>
-
-          </div>
-
-          {/* =====================================================
-              TRUST INDICATORS
-          ===================================================== */}
-
-          <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3 text-sm text-text-muted">
-
-            <div className="flex items-center gap-2">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-green-light text-brand-green">
-                ✓
-              </span>
-
-              Community-centered care
-            </div>
-
-            <div className="flex items-center gap-2">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-brand-purple-light text-brand-purple">
-                ✓
-              </span>
-
-              Evidence-informed support
-            </div>
-
-          </div>
-
-          {/* =====================================================
-              IMPACT SNAPSHOT
-          ===================================================== */}
-
-          <div className="mt-10 border-t border-border pt-7">
-
-            <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.22em] text-text-muted">
-              Our Impact
-            </p>
-
-            <div className="grid grid-cols-3 gap-4 sm:gap-7">
-
-              {/* People reached */}
-
-              <div>
-                <p className="text-2xl font-bold tracking-tight text-brand-blue sm:text-3xl">
-                  1,000+
-                </p>
-
-                <p className="mt-1 text-xs font-medium leading-5 text-text-secondary sm:text-sm">
-                  Community Members Reached
-                </p>
-              </div>
-
-              {/* Active programmes */}
-
-              <div className="border-l border-border pl-4 sm:pl-7">
-                <p className="text-2xl font-bold tracking-tight text-brand-purple sm:text-3xl">
-                  6+
-                </p>
-
-                <p className="mt-1 text-xs font-medium leading-5 text-text-secondary sm:text-sm">
-                  Active Programmes
-                </p>
-              </div>
-
-              {/* Counties */}
-
-              <div className="border-l border-border pl-4 sm:pl-7">
-                <p className="text-2xl font-bold tracking-tight text-brand-green-dark sm:text-3xl">
-                  5
-                </p>
-
-                <p className="mt-1 text-xs font-medium leading-5 text-text-secondary sm:text-sm">
-                  Counties Reached
-                </p>
-              </div>
-
-            </div>
-
-            <Link
-              href="#impact"
-              className="mt-5 inline-flex items-center text-xs font-bold text-brand-blue transition-colors hover:text-brand-purple"
-            >
-              Explore our impact
-              <span className="ml-2">
-                →
+              <span aria-hidden="true" className="text-brand-purple">
+                ↗
               </span>
             </Link>
+          </div>
 
+          {/* Care principles */}
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+            {commitments.map((commitment) => (
+              <div key={commitment} className="flex items-center gap-2.5">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand-green-light text-xs font-bold text-brand-green-dark">
+                  ✓
+                </span>
+                <span className="text-xs font-medium text-text-secondary sm:text-sm">
+                  {commitment}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Impact summary */}
+          <div className="mt-10 border-t border-border/80 pt-7 sm:mt-12 sm:pt-8">
+            <div className="mb-6 flex items-center justify-between gap-4">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-text-muted sm:text-xs">
+                Our Impact
+              </p>
+
+              <Link
+                href="/#impact"
+                className="group inline-flex items-center gap-2 text-xs font-bold text-brand-blue transition-colors hover:text-brand-purple sm:text-sm"
+              >
+                Explore our work
+                <span
+                  aria-hidden="true"
+                  className="transition-transform group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-3 gap-3 sm:gap-5">
+              {impactStats.map((stat, index) => (
+                <div
+                  key={stat.label}
+                  className={
+                    index === 0
+                      ? "min-w-0"
+                      : "min-w-0 border-l border-border pl-3 sm:pl-5"
+                  }
+                >
+                  <p
+                    className={`text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl ${stat.accent}`}
+                  >
+                    {stat.value}
+                  </p>
+                  <p className="mt-2 max-w-32 text-[11px] leading-5 text-text-secondary sm:text-xs sm:leading-6">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
-        {/* =======================================================
-            RIGHT VISUAL
-        ======================================================= */}
+        {/* Right: Photography and brand story */}
+        <div className="relative mx-auto w-full max-w-[540px] lg:ml-auto">
+          {/* Outer frame */}
+          <div
+            aria-hidden="true"
+            className="absolute -inset-3 -z-10 rounded-[2rem] border border-brand-blue/10 sm:-inset-5 sm:rounded-[2.5rem]"
+          />
 
-        <div className="relative mx-auto w-full max-w-xl lg:ml-auto">
-
-          {/* =====================================================
-              PHOTO CARD
-          ===================================================== */}
-
-          <div className="relative aspect-[4/4.5] overflow-hidden rounded-[2.5rem] bg-white shadow-2xl shadow-brand-blue/10">
-
+          {/* Main photograph */}
+          <div className="group relative aspect-[4/4.7] overflow-hidden rounded-[1.5rem] bg-brand-blue-light shadow-2xl shadow-brand-blue/10 sm:rounded-[2rem]">
             <Image
-              src="/Images/IMG-1.jpg"
+              src="/images/IMG-1.jpg"
               alt="Real Time Psychosupport community mental health work"
               fill
               priority
-              sizes="(max-width: 1024px) 90vw, 45vw"
-              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 46vw"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.025]"
             />
 
-            {/* Brand overlay */}
-
+            {/* Photo treatment */}
             <div
               aria-hidden="true"
-              className="absolute inset-0 bg-gradient-to-br from-brand-blue/35 via-transparent to-brand-purple/35"
+              className="absolute inset-0 bg-gradient-to-b from-brand-blue/20 via-transparent to-brand-blue/80"
             />
 
-            {/* Soft green glow */}
-
-            <div
-              aria-hidden="true"
-              className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-brand-green/30 blur-3xl"
-            />
-
-            {/* =================================================
-                TOP BRAND LABEL
-            ================================================= */}
-
-            <div className="absolute left-6 top-6 rounded-2xl border border-white/40 bg-white/90 px-5 py-3 shadow-lg backdrop-blur-md sm:left-8 sm:top-8">
-
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-blue">
-                Real Time Psychosupport
-              </p>
-
-              <p className="mt-1 text-sm font-semibold text-text-primary">
-                Community Mental Health
-              </p>
-
+            {/* Top label */}
+            <div className="absolute left-4 right-4 top-4 sm:left-6 sm:right-6 sm:top-6">
+              <div className="inline-flex max-w-full items-center gap-3 rounded-full border border-white/50 bg-white/90 px-4 py-3 shadow-lg backdrop-blur-md sm:px-5">
+                <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-brand-green" />
+                <span className="truncate text-[10px] font-bold uppercase tracking-[0.14em] text-brand-blue sm:text-xs sm:tracking-[0.18em]">
+                  Mental Health & Wellbeing
+                </span>
+              </div>
             </div>
 
-            {/* =================================================
-                BOTTOM INFORMATION CARD
-            ================================================= */}
+            {/* Bottom photo caption */}
+            <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8">
+              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-brand-green-light sm:text-xs">
+                Our commitment
+              </p>
 
-            <div className="absolute bottom-6 left-6 right-6 sm:bottom-8 sm:left-8 sm:right-8">
+              <h2 className="mt-3 max-w-md text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl">
+                Every person deserves to be heard, supported, and valued.
+              </h2>
 
-              <div className="rounded-2xl border border-white/50 bg-white/90 p-5 shadow-xl backdrop-blur-md">
+              <div className="mt-5 flex gap-1.5" aria-hidden="true">
+                <span className="h-1 w-9 rounded-full bg-brand-blue-light" />
+                <span className="h-1 w-9 rounded-full bg-brand-purple-light" />
+                <span className="h-1 w-9 rounded-full bg-brand-green-light" />
+              </div>
+            </div>
+          </div>
 
-                <div className="flex items-start justify-between gap-5">
-
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.16em] text-brand-purple">
-                      Our Commitment
-                    </p>
-
-                    <p className="mt-2 text-lg font-bold leading-6 text-text-primary">
-                      Mental health is a human right.
-                    </p>
-                  </div>
-
-                  <div className="flex gap-1.5 pt-1">
-                    <span className="h-3 w-3 rounded-full bg-brand-blue" />
-                    <span className="h-3 w-3 rounded-full bg-brand-purple" />
-                    <span className="h-3 w-3 rounded-full bg-brand-green" />
-                  </div>
-
-                </div>
-
-                <div className="mt-4 flex h-1.5 overflow-hidden rounded-full">
-                  <span className="w-1/3 bg-brand-blue" />
-                  <span className="w-1/3 bg-brand-purple" />
-                  <span className="w-1/3 bg-brand-green" />
-                </div>
-
+          {/* Floating approach card */}
+          <div className="relative mx-3 -mt-5 rounded-2xl border border-white/80 bg-white/95 p-5 shadow-xl shadow-brand-blue/10 backdrop-blur-md sm:absolute sm:-bottom-7 sm:-left-10 sm:mx-0 sm:mt-0 sm:max-w-[255px] sm:p-5 lg:-left-12">
+            <div className="flex items-start gap-3.5">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-brand-purple-light text-xl text-brand-purple">
+                <span aria-hidden="true">♡</span>
               </div>
 
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-brand-purple">
+                  Our Approach
+                </p>
+                <p className="mt-1.5 text-sm font-semibold leading-6 text-text-primary">
+                  Compassionate care. Stronger communities.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* =====================================================
-              FLOATING APPROACH CARD
-          ===================================================== */}
-
-          <div className="absolute -bottom-5 -left-3 hidden max-w-[230px] rounded-2xl border border-white bg-white p-4 shadow-xl sm:block lg:-left-8">
-
-            <p className="text-xs font-bold uppercase tracking-wider text-brand-purple">
-              Our Approach
-            </p>
-
-            <p className="mt-1 text-sm font-semibold leading-5 text-text-primary">
-              Compassionate care. Community resilience.
-            </p>
-
-          </div>
-
-          {/* =====================================================
-              FLOATING BRAND ACCENT
-          ===================================================== */}
-
+          {/* Decorative accent */}
           <div
             aria-hidden="true"
-            className="absolute -right-4 top-16 hidden h-16 w-16 rounded-2xl bg-brand-green shadow-xl shadow-brand-green/20 sm:block"
+            className="absolute -right-3 top-1/4 -z-10 hidden h-16 w-16 rounded-2xl bg-brand-green shadow-lg shadow-brand-green/20 sm:block lg:-right-5"
           />
-
         </div>
       </div>
 
-      {/* =========================================================
-          BOTTOM BRAND STRIP
-      ========================================================= */}
-
-      <div className="mx-auto max-w-7xl px-5 pb-8 sm:px-8 lg:px-10">
-
+      {/* Closing brand strip */}
+      <div className="mx-auto max-w-7xl px-5 pb-7 sm:px-8 lg:px-10 lg:pb-9">
         <div className="flex items-center gap-4">
-
           <span className="h-px flex-1 bg-brand-blue/10" />
-
-          <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-text-muted">
-            Healing • Hope • Community
-          </span>
-
+          <p className="text-center text-[9px] font-bold uppercase tracking-[0.2em] text-text-muted sm:text-[10px] sm:tracking-[0.25em]">
+            Healing <span className="px-1 text-brand-blue">•</span> Hope{" "}
+            <span className="px-1 text-brand-purple">•</span> Community
+          </p>
           <span className="h-px flex-1 bg-brand-purple/10" />
-
         </div>
-
       </div>
     </section>
   );
